@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "XIBViewController.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)loadxibButtonPress:(id)sender {
+    
+    XIBViewController *view = [[XIBViewController alloc]initWithNibName:@"XIBViewController" bundle:nil];
+    [self presentViewController:view animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
